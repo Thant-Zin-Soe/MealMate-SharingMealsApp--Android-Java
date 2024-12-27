@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/shop_list"
+
+        android:icon="@drawable/baseline_shopping_cart_24"
+
+        android:title="TODO"
+        app:showAsAction="always" />
+</menu>

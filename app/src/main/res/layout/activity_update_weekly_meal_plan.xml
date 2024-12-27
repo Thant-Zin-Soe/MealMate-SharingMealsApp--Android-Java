@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainUpdateRecipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.weeklyMealPlan.UpdateWeeklyMealPlanActivity">
+
+    <!-- AppBar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarlayoutUpdateRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarUpdateRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:title="Update Recipe"
+            app:titleTextColor="?attr/colorOnPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/appBarlayoutUpdateRecipe">
+
+        <!-- Recipe Image -->
+        <ImageView
+            android:id="@+id/updateRecipeImageView"
+            android:layout_width="149dp"
+            android:layout_height="161dp"
+            android:src="@drawable/select_image"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- Recipe Type Spinner -->
+        <Spinner
+            android:id="@+id/updateRecipeTypeSpinner"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/lavanda"
+
+            android:enabled="false"
+            android:textAlignment="center" />
+
+        <!-- Recipe Name EditText -->
+        <EditText
+            android:id="@+id/updateRecipeNameEditText"
+            android:layout_width="267dp"
+            android:layout_height="54dp"
+            android:hint="Update the name of recipe"
+            android:inputType="text" />
+
+        <!-- Recipe Instruction EditText -->
+        <EditText
+            android:id="@+id/updateRecipeInstructionEditText"
+            android:layout_width="267dp"
+            android:layout_height="120dp"
+            android:gravity="start|top"
+            android:hint="Update instructions"
+            android:inputType="textMultiLine" />
+
+        <!-- Scrollable Ingredient List -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- Column 1: Vegetables -->
+                <LinearLayout
+                    android:id="@+id/updateColumnVegetables"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Vegetables"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- List of Vegetables -->
+                    <CheckBox
+                        android:id="@+id/checkBoxCarrot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carrot" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxOnion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Onion" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPotato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Potato" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxTomato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tomato" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSpinach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spinach" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBroccoli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Broccoli" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCauliflower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cauliflower" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCucumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cucumber" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxZucchini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zucchini" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCapsicum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capsicum (Bell Pepper)" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCabbage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cabbage" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxEggplant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eggplant" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxOkra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Okra" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSweetCorn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sweet Corn" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGreenPeas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Peas" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPumpkin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pumpkin" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRadish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Radish" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBeetroot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beetroot" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCelery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celery" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGarlic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Garlic" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGinger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ginger" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMushroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mushroom" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxChili"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chili" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSpringOnion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spring Onion" />
+
+                    <!-- Add more vegetable checkboxes here -->
+                </LinearLayout>
+
+                <!-- Column 2: Grains -->
+
+                <!-- Column 3: Spices and Seasonings -->
+                <LinearLayout
+                    android:id="@+id/updateColumnGrains"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Grains"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- List of Grains -->
+                    <CheckBox
+                        android:id="@+id/checkBoxRice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rice" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxWheat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wheat" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxOats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oats" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxQuinoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quinoa" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMillet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Millet" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBuckwheat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buckwheat" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxAmaranth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amaranth" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFarro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farro" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSpelt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spelt" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxTeff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teff" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCouscous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Couscous" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSorghum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorghum" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBarleyFlakes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barley Flakes" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBarley"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barley" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCorn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Corn" />
+                    <!-- Add more grain checkboxes here -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/updateColumnSpices"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Spices Seasonings"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- List of Spices -->
+                    <CheckBox
+                        android:id="@+id/checkBoxSalt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salt" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCinnamon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cinnamon" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxClove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clove" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxNutmeg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nutmeg" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCardamom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cardamom" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCoriander"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coriander" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBayLeaf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bay Leaf" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxStarAnise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Star Anise" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFenugreek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fenugreek" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMustardSeeds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mustard Seeds" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxChiliFlakes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chili Flakes" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPepper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pepper" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxCumin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cumin" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxTurmeric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Turmeric" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPaprika"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paprika" />
+                    <!-- Add more spice checkboxes here -->
+                </LinearLayout>
+
+                <!-- Column 4: Meat -->
+                <LinearLayout
+                    android:id="@+id/updateColumnMeat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:text="Meat"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- List of Meat -->
+                    <CheckBox
+                        android:id="@+id/checkBoxChicken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Chicken" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBeef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Beef" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Pork" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Fish" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLamb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="Appetizers" />
+                    <!-- Add more meat checkboxes here -->
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveUpdatedRecipeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:text="Save Recipe"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
